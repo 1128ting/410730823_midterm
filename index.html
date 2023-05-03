@@ -1,0 +1,146 @@
+<html>
+  <head> 
+    <title>410730823 教科2B 林冠廷</title>  <!-- 網頁標題 -->
+    <link rel="stylesheet" href="work.css"/>
+    <!--  Swiper CSS顯示 -->
+		<link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+  
+  </head>
+  <body>
+    <!-- Swiper -->
+    <div id="app">
+      <div class="swiper carousel">   <!-- 幻燈片內容 -->
+        <div class="swiper-wrapper">   <!-- 外層(必要) -->
+           
+<!-- +++++++++++++++++++++++++++++++++++++++   第一張卡片的內容   ++++++++++++++++++++++++++++++++++++++++++++ -->
+        <figure class="swiper-slide" v-for="(card,id) in cards1"> <!-- 連結到js內容 -->
+            <div class="box"> <!-- 整個卡片產生 -->
+<!-- +++++++++++++++++++++++++++++++++++++++   卡片的其他物件  ++++++++++++++++++++++++++++++++++++++++++++ -->              
+              <div class="top"> 
+                <img src="./image/01.jpeg" alt="" /> <!-- 個人照片 -->
+                <h1 class="name">{{card.title}} <span class="smalltext">410730823</span></h1> <!-- 標題(姓名+學號) -->
+                <div class="tag"> </div>  <!-- 長方形標籤 -->
+              </div>
+  <!-- +++++++++++++++++++++++++++++++++++++++   第一張卡片的文字內容   ++++++++++++++++++++++++++++++++++++++++++++ -->            
+            <div class="bottom">
+            <h3>個人小資訊</h3>           
+              <ul> 
+                <li> 
+                  <h4>個性：</h4>
+                </li>
+                <li> 
+                    {{card.featurn}}
+                </li>
+                <li> 
+                    <h4>興趣：</h4>
+                </li>
+                <li> 
+                    {{card.interest}}
+                </li>
+                <li> 
+                    <h4>人生格言：</h4>
+                </li>
+                <li> 
+                    {{card.saying}}
+                </li>
+              </ul>
+              
+            </div>
+            </div>
+          </figure>  
+<!-- +++++++++++++++++++++++++++++++++++++++   第二張卡片的內容   ++++++++++++++++++++++++++++++++++++++++++++ -->
+        <figure class="swiper-slide" v-for="(card,id) in cards2"> <!-- 連結到js內容 -->
+          <div class="box"> <!-- 整個卡片產生 -->
+<!-- +++++++++++++++++++++++++++++++++++++++   卡片的其他物件  ++++++++++++++++++++++++++++++++++++++++++++ -->              
+            <div class="top"> 
+              <img src="./image/01.jpeg" alt="" /> <!-- 個人照片 -->
+              <h1 class="name">{{card.title}} <span class="smalltext">410730823</span></h1> <!-- 標題(姓名+學號) -->
+              <div class="tag"> </div>  <!-- 長方形標籤 -->
+            </div>
+<!-- +++++++++++++++++++++++++++++++++++++++   第二張卡片的文字內容   ++++++++++++++++++++++++++++++++++++++++++++ -->            
+            <div class="bottom">  
+            <h3>修習課程</h3>     
+              <ul> 
+                <li> 
+                  <h4>教科系：</h4>
+                </li>
+                <li>
+                    {{card.learn1}}
+                </li>
+                <li> 
+                    {{card.learn2}}
+                </li>
+                <li> 
+                    <h4>通識課：</h4>
+                  </li>
+                <li> 
+                    {{card.learn3}}
+                </li>
+              </ul>
+            </div>
+            </div>
+          </figure>  
+<!-- +++++++++++++++++++++++++++++++++++++++   第三張卡片的內容   ++++++++++++++++++++++++++++++++++++++++++++ -->
+        <figure class="swiper-slide" v-for="(card,id) in cards3"> <!-- 連結到js內容 -->
+          <div class="box"> <!-- 整個卡片產生 -->
+<!-- +++++++++++++++++++++++++++++++++++++++   卡片的其他物件  ++++++++++++++++++++++++++++++++++++++++++++ -->              
+              <div class="top"> 
+                <img src="./image/01.jpeg" alt="" /> <!-- 個人照片 -->
+                <h1 class="name">{{card.title}} <span class="smalltext">410730823</span></h1> <!-- 標題(姓名+學號) -->
+                <div class="tag"> </div>  <!-- 長方形標籤 -->
+              </div>
+<!-- +++++++++++++++++++++++++++++++++++++++   第三張卡片的文字內容   ++++++++++++++++++++++++++++++++++++++++++++ -->            
+            <div class="bottom">  
+            <ul> 
+            <h3>課程作品集</h3> 
+              <h4>
+                  教學原理與策略 : 
+              </h4> 
+                <li>
+                    <a v-bind:href="card.link1" target="_blank">微試教教材</a>
+                </li>
+                
+              <h4>
+                  程式設計與實習 : 
+              </h4> 
+                <li>
+                    <a v-bind:href="card.link2" target="_blank">萬花筒立體圖</a>
+                    <a v-bind:href="card.link3" target="_blank">人體互動影像</a>
+                </li>
+              <h4>
+                  平面設計 : 
+              </h4> 
+                <li> 
+                    <a v-bind:href="card.link4" target="_blank">主題海報設計</a>
+                </li>
+              <h4>
+                  電腦入門與程式思維 : 
+              </h4> 
+                <li> 
+                    <a v-bind:href="card.link5" target="_blank">期末自軸車展示</a>
+                </li>
+            </ul>
+            
+            </div>
+            </div>
+        </figure>  
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+        </div>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+        <button type="button" class="swiper-button-next"></button>  <!-- 右移鍵 -->
+        <button type="button" class="swiper-button-prev"></button>  <!-- 左移鍵 -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->        
+        <div class="swiper-pagination"></div>   <!-- 幻燈片頁碼呈現 --> 
+      </div>
+    </div>  
+    <!-- Swiper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.7.8/vue.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="work.js"></script>
+		<!-- Initialize Swiper -->
+  </body>
+</html>

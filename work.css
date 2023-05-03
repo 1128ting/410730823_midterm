@@ -1,0 +1,168 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+/* 螢幕背景 */
+body {
+  font-family: "Poppins", sans-serif;
+  display: grid;
+  place-items: center;
+  background-color: #3a8690;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-size: 14px;
+}
+
+
+/* 連結 */
+a {
+  color: #6e1dacf1;
+  text-decoration: initial;
+}
+/* 下方文字內容的背景 */
+.box {
+  width: 380px;
+  background-color: #64aeb4;
+  box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.3);
+  transition: 0.5s;
+}
+/* 使卡片向左上移動 */
+.box:hover {
+  box-shadow: 5px 5px 60px rgba(0, 0, 0, 0.4);
+  transform: translate(-5px, -5px);
+}
+/* 個人照片 */
+.top {
+  height: 330px;
+  position: relative;
+  transition: 0.5s;
+}
+/* 標籤(右半邊長方型) */
+.top .tag {
+  width: 25px;
+  height: 45px;
+  background-color: #51e340d9;
+  float: right;
+  margin-right: 20px;
+}
+/* 名字 */
+.top .name {
+  position: absolute;
+  margin: 0;
+  left: 15px;
+  bottom: 0px;
+  padding: 5px 15px;
+  letter-spacing: 2px;
+  color: rgba(20, 244, 222, 0.872);
+  font-size: 28px;
+  font-weight: 300;
+}
+/* 學號 */
+.top .name .smallText {
+  font-size: 14px;
+}
+
+/* 盒子(卡片內容)的大小 */
+.bottom {
+  padding: 10px 20px 20px 20px;
+  
+}
+/* li的內容 */
+.bottom li {
+  padding: 5px 0px;
+}
+
+.bottom h3 {
+  display: inline-block;
+  margin: 0;
+}
+
+.bottom ul {
+  list-style: none;
+}
+
+.buttons {
+  margin-top: 30px;
+}
+
+.swiper {
+  width: 380px;
+  height:580px
+}
+/* 卡片背面 */
+.swiper-slide {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #10c816;
+}
+/* 個人照片的大小*/
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+/* 左右移動鍵按鈕的內容 */
+.swiper button {
+  width: 10px;
+  height: 10px;
+  color: #e5e836;
+  background: transparent;
+  border: none;
+  outline: none;
+  transition: opacity 0.25s;
+}
+
+.swiper button:hover {
+  opacity: 0.8;
+}
+/* 左右移動鍵大小 */
+.swiper button::before, .swiper button::after {
+  font-size: 22px;
+}
+
+.swiper-pagination-bullet {
+  background-color: #ffffff;
+}
+
+.swiper-description {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  isolation: isolate;
+  padding: 50px 25px 25px;
+  color: #fff;
+}
+
+.swiper-description::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.8) 50%);
+}
+
+.swiper-description h2 {
+  font-size: 42px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.swiper-description p {
+  font-size: 14px;
+  max-width: 50%;
+  margin-bottom: 15px;
+}
